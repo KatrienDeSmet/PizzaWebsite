@@ -1,0 +1,59 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}Pizza{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Pizzas
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="{{ path ('index') }}">Home</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+    <h1>Pizza list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('pizza_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.description }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('pizza_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('pizza_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('pizza_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    </div>
+{% endblock %}

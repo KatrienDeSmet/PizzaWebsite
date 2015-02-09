@@ -1,0 +1,30 @@
+korting:
+    path:     /
+    defaults: { _controller: "pizzaSiteBundle:Korting:index" }
+
+korting_show:
+    path:     /{id}/show
+    defaults: { _controller: "pizzaSiteBundle:Korting:show" }
+
+korting_new:
+    path:     /new
+    defaults: { _controller: "pizzaSiteBundle:Korting:new" }
+
+korting_create:
+    path:     /create
+    defaults: { _controller: "pizzaSiteBundle:Korting:create" }
+    requirements: { _method: post }
+
+korting_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "pizzaSiteBundle:Korting:edit" }
+
+korting_update:
+    path:     /{id}/update
+    defaults: { _controller: "pizzaSiteBundle:Korting:update" }
+    requirements: { _method: post|put }
+
+korting_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "pizzaSiteBundle:Korting:delete" }
+    requirements: { _method: post|delete }

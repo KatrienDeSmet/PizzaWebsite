@@ -1,0 +1,30 @@
+bestelling:
+    path:     /
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:index" }
+
+bestelling_show:
+    path:     /{id}/show
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:show" }
+
+bestelling_new:
+    path:     /new
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:new" }
+
+bestelling_create:
+    path:     /create
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:create" }
+    requirements: { _method: post }
+
+bestelling_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:edit" }
+
+bestelling_update:
+    path:     /{id}/update
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:update" }
+    requirements: { _method: post|put }
+
+bestelling_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "pizzaSiteBundle:Bestelling:delete" }
+    requirements: { _method: post|delete }

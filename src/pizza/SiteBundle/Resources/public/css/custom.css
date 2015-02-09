@@ -1,0 +1,28 @@
+.title th{
+
+    font-weight: bold;
+    color: #cc0;
+    padding-bottom: 15px;
+    padding-right: 15px;
+
+
+} 
+
+.name, .description, .select {
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 2px solid #cc0;
+}
+
+.name {
+
+    font-weight: bold;
+    
+}
+
+
+.description{
+
+    font-style: italic;
+}

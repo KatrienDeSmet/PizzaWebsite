@@ -1,0 +1,122 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block carrousel %}
+
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Pizza Delicious');"></div>
+                <div class="carousel-caption">
+                    <h2>Pizza 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Pizza Hot Lovers');"></div>
+                <div class="carousel-caption">
+                    <h2>Pizza 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Pizza Peperoni');"></div>
+                <div class="carousel-caption">
+                    <h2>Pizza 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+{% endblock %}
+
+{% block content %}
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Welcome to Pizzalicious</h1>
+        </div>
+
+        <div class="col-md-9">
+
+                <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">8€</h4>
+                                <h4><a href="#">Talia special</a>
+                                </h4>
+                                <p>salami, champignons, ui, kip, gehakt, gorgonzola, ei.</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">10€</h4>
+                                <h4><a href="#">Hot lovers</a>
+                                </h4>
+                                <p>Jalapenos, pepperoni, paprika, ui.</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">15€</h4>
+                                <h4><a href="#">Marguerita</a>
+                                </h4>
+                                <p>Dubbele kaas en mozzarella met oregano.</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">15€</h4>
+                                <h4><a href="#">Marguerita</a>
+                                </h4>
+                                <p>Dubbele kaas en mozzarella met oregano.</p>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>   
+        <!-- /.row -->  
+{% endblock %}
+
+{% block JVScode %}
+
+<script type="text/javascript">
+    $('.carousel').carousel({
+    interval: 5000 //changes the speed
+    })
+</script>
+            
+{% endblock %}
+
+

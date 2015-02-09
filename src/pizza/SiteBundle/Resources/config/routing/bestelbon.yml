@@ -1,0 +1,30 @@
+bestelbon:
+    path:     /
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:index" }
+
+bestelbon_show:
+    path:     /{id}/show
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:show" }
+
+bestelbon_new:
+    path:     /new
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:new" }
+
+bestelbon_create:
+    path:     /create
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:create" }
+    requirements: { _method: post }
+
+bestelbon_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:edit" }
+
+bestelbon_update:
+    path:     /{id}/update
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:update" }
+    requirements: { _method: post|put }
+
+bestelbon_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "pizzaSiteBundle:Bestelbon:delete" }
+    requirements: { _method: post|delete }

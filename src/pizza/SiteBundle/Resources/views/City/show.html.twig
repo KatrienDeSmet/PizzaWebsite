@@ -1,0 +1,38 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}Customer{% endblock %}
+
+{% block content %}
+    <h1>City</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td>{{ entity.zipcode }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ entity.city }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('city') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('city_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

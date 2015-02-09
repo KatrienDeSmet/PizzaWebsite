@@ -1,0 +1,30 @@
+categorie:
+    path:     /
+    defaults: { _controller: "pizzaSiteBundle:Categorie:index" }
+
+categorie_show:
+    path:     /{id}/show
+    defaults: { _controller: "pizzaSiteBundle:Categorie:show" }
+
+categorie_new:
+    path:     /new
+    defaults: { _controller: "pizzaSiteBundle:Categorie:new" }
+
+categorie_create:
+    path:     /create
+    defaults: { _controller: "pizzaSiteBundle:Categorie:create" }
+    requirements: { _method: post }
+
+categorie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "pizzaSiteBundle:Categorie:edit" }
+
+categorie_update:
+    path:     /{id}/update
+    defaults: { _controller: "pizzaSiteBundle:Categorie:update" }
+    requirements: { _method: post|put }
+
+categorie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "pizzaSiteBundle:Categorie:delete" }
+    requirements: { _method: post|delete }

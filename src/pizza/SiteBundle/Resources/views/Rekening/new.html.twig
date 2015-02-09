@@ -1,0 +1,17 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}Rekening{% endblock %}
+
+{% block content %}
+    <h1>Rekening creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('rekening') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

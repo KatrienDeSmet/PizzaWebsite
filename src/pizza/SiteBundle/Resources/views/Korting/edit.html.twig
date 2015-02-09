@@ -1,0 +1,18 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}Korting{% endblock %}
+
+{% block content %}
+    <h1>Korting edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('korting') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>
+            PizzaBusiness - {% block title %}Home{% endblock %}
+        </title>
+
+        {% stylesheets 
+            '@pizzaSiteBundle/Resources/public/css/*'
+            '@pizzaSiteBundle/Resources/public/css/shop-item.css'
+            '@pizzaSiteBundle/Resources/public/font-awesome/css/*'
+            filter='cssrewrite' 
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        
+    </head>
+    
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path ('index') }}">Pizzalicious</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ path ('about') }}">About</a>
+                    </li>
+                    <li>
+                        <a href="{{ path ('contact') }}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{{ path ('winkelkar') }}">Winkelkarretje</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="{{ path ('login') }}" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ path ('login') }}">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        <!-- /.container -->
+        </nav>
+
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="container-fluid">
+                <section class="container">
+                    <div class="container-page">                
+                        <div class="col-md-6">
+                        <form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Register</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Username</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" placeholder="username" class="input-xlarge" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Email</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" placeholder="email" class="input-xlarge" type="text">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="control-group">
+  <label class="control-label" for="passwordinput">Password</label>
+  <div class="controls">
+    <input id="passwordinput" name="passwordinput" placeholder="password" class="input-xlarge" type="password">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <label class="control-label" for="">Login</label>
+  <div class="controls">
+    <button id="" name="" class="btn btn-primary">Button</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+        
+                        <div class="col-md-6">
+                            <h3 class="dark-grey">Terms and Conditions</h3>
+                                <p>By clicking on "Register" you agree to The Company's' Terms and Conditions</p>
+                                <p> While rare, prices are subject to change based on exchange rate fluctuations - should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)</p>
+                                <p>Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)</p>
+                                <p>Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)</p>
+                                <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+        
+        {% javascripts 
+            '@pizzaSiteBundle/Resources/public/js/jquery.js' 
+            '@pizzaSiteBundle/Resources/public/js/Bootstrap.min.js' 
+        %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% block JVScode %}
+            
+        {% endblock %}
+        
+
+    </body>
+
+</html>

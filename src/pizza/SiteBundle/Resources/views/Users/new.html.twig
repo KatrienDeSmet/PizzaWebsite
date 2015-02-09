@@ -1,0 +1,17 @@
+{% extends "pizzaSiteBundle::base.html.twig" %}
+
+{% block title %}User{% endblock %}
+
+{% block content %}
+    <h1>Users creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('users') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

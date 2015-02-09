@@ -1,0 +1,83 @@
+pizza_site_customer:
+    resource: "@pizzaSiteBundle/Resources/config/routing/customer.yml"
+    prefix:   /customer
+
+pizza_site_rekening:
+    resource: "@pizzaSiteBundle/Resources/config/routing/rekening.yml"
+    prefix:   /rekening
+
+pizza_site_pizza:
+    resource: "@pizzaSiteBundle/Resources/config/routing/pizza.yml"
+    prefix:   /pizza
+
+pizza_site_phone:
+    resource: "@pizzaSiteBundle/Resources/config/routing/phone.yml"
+    prefix:   /phone
+
+pizza_site_korting:
+    resource: "@pizzaSiteBundle/Resources/config/routing/korting.yml"
+    prefix:   /korting
+
+pizza_site_city:
+    resource: "@pizzaSiteBundle/Resources/config/routing/city.yml"
+    prefix:   /city
+
+pizza_site_categorie:
+    resource: "@pizzaSiteBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+pizza_site_bestelling:
+    resource: "@pizzaSiteBundle/Resources/config/routing/bestelling.yml"
+    prefix:   /bestelling
+
+pizza_site_bestelbon:
+    resource: "@pizzaSiteBundle/Resources/config/routing/bestelbon.yml"
+    prefix:   /bestelbon
+
+pizza_site_users:
+    resource: "@pizzaSiteBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+
+login:
+    path:     /login
+    defaults: { _controller: pizzaSiteBundle:Security:login }
+
+login_check:
+    path:     /login_check
+    
+
+logout:
+    path:     /logout
+    
+
+pizza_site_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: pizzaSiteBundle:Default:index }
+
+index:
+    path:     /
+    defaults: { _controller: pizzaSiteBundle:View:index }
+
+about:
+    path:     /about
+    defaults: { _controller: pizzaSiteBundle:View:about }
+
+contact:
+    path:     /contact
+    defaults: { _controller: pizzaSiteBundle:View:contact }
+
+winkelkar:
+    path:     /winkel
+    defaults: { _controller: pizzaSiteBundle:View:winkelkar }
+
+small:
+    path:     /small
+    defaults: { _controller: pizzaSiteBundle:Pizza:small }
+
+medium:
+    path:     /medium
+    defaults: { _controller: pizzaSiteBundle:Pizza:medium }
+
+large:
+    path:     /large
+    defaults: { _controller: pizzaSiteBundle:Pizza:large }
